@@ -1,0 +1,223 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+}
+html{
+  font-family: Poppins, Segoe UI, sans-serif;
+  font-size: 12pt;
+  color: #2E2B41;
+  text-align: center;
+}
+#loginPage{
+  height: 75vh;
+}
+#signupPage{
+  display: none;
+  height: 85vh;
+}
+#forgotPasswordPage {
+  height: 70vh;
+  display: none;
+}
+body{
+  min-height: 100vh;
+  background-size: cover;
+  background-position: right;
+  overflow: hidden;
+}
+.container{
+  background-color: #006699;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.wrapper{
+  box-sizing: border-box;
+  background-color: #FFFFFF; 
+  width: max(40%, 600px);
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+h1{
+  font-size: 3rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+#loginForm, #signupForm{
+  width: min(400px, 100%);
+  margin: 20px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+form > div{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+form label{
+  flex-shrink: 0;
+  height: 50px;
+  width: 50px;
+  background-color: #006699;
+  fill: #FFFFFF;
+  color: #FFFFFF;
+  border-radius: 10px 0 0 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+form input{
+  box-sizing: border-box;
+  flex-grow: 1;
+  min-width: 0;
+  height: 50px;
+  padding: 1em;
+  font: inherit;
+  border-radius: 0 10px 10px 0;
+  border: 2px solid #F2F2F2;
+  border-left: none;
+  background-color: #F2F2F2;
+  transition: 150ms ease;
+}
+form input:hover{
+  border-color: #006699;
+}
+form input:focus{
+  outline: none;
+  border-color: #2E2B41;
+}
+div:has(input:focus) > label{
+  background-color: #2E2B41;
+}
+form input::placeholder{
+  color: #2E2B41;
+}
+form button{
+  margin-top: 10px;
+  border: none;
+  border-radius: 1000px;
+  padding: .85em 4em;
+  background-color: #006699;
+  color: #FFFFFF;
+  font: inherit;
+  font-weight: 600;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: 150ms ease;
+}
+form button:hover{
+  background-color: #2E2B41;
+}
+form button:focus{
+  outline: none;
+  background-color: #2E2B41;
+}
+a{
+  text-decoration: none;
+  color: #006699;
+}
+a:hover{
+  text-decoration: underline;
+}
+
+form div.incorrect label{
+  background-color: #f06272;
+}
+form div.incorrect input{
+  border-color: #f06272;
+}
+#error-message, #success-message{
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(240, 98, 114, 0.9);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  z-index: 1000;
+  display: none;
+}
+#success-message{
+  background-color: rgba(24 189 60);
+}
+
+#error-message:not(:empty){
+  display: block;
+}
+
+#success-message:not(:empty){
+  display: block;
+}
+.incorrect {
+  border-color: red;
+}
+.incorrect input {
+  border-color: red;
+}
+#forgotPasswordForm{
+  width: 25vw;
+  margin: 5px 0;
+}
+.password-strength-container {
+  width: 100%;
+  text-align: right;
+  margin-top: -5px;
+  margin-bottom: 5px;
+}
+#password-strength-text {
+  font-size: 0.8em;
+  font-weight: bold;
+}
+@media(max-width: 1100px){
+  #loginPage, #signupPage, #forgotPasswordPage{
+    height: 100vh;
+    width: min(600px, 100%);
+    padding: 20px;
+    border-radius: 0;
+  }
+}
+
+.google-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: min(400px, 100%);
+  padding: 10px;
+  background-color: #006699;
+  font-family: poppins, sans-serif;
+  border-radius: 4px;
+  font-weight: 500;
+  color: white;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  margin-bottom: 15px;
+  transition: background-color 0.3s;
+}
+
+.google-btn:hover {
+  background-color: #2E2B41;
+}
+
+.google-btn img {
+  width: 25px;
+  height: 25px;
+}
+
+.separator {
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
